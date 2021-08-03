@@ -20,8 +20,11 @@ code {
 .nav-link{
   color: black !important;
 }
+.navbar-custom {
+  height: 50px !important;
+}
 h1{
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 .flex-container{
   display: flex !important;
@@ -66,18 +69,28 @@ input{
   height:90vh;
 }
 .adminfunction{
-  padding: 10px;
-  background-color: rgb(1, 1, 77);
+  padding: 4px;
+  height: 30px;
+  background-color: rgb(48, 48, 128);
 }
 .adminfunction li {
-  list-style-type: none !important;
+  margin: 20px;
   display: inline !important;
+  font-size: small;
   color: white !important;
 }
 .adminfunction li a{
   color: white;
   padding: 20px;
+  text-decoration: none;
 }
-td, th, tr{
+a{
+  text-decoration: none;
+}
+td,tr{
   text-align: left;
+  font-size: 12px;
+}
+th{
+  font-size: 15px !important;
 }

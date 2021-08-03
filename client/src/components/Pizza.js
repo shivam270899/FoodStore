@@ -24,13 +24,13 @@ export default function Pizza({ pizza }) {
     return (
         <div style={{ margin: "40px" }} data-aos="zoom-in" className="shadow-lg p-3 mb-5 bg-white rounded">
             <div onClick={handleShow}>
-                <h1>{pizza.name}</h1>
-                <img src={pizza.image} className="img-fluid" style={{ height: "200px", width: "200px" }}></img>
+                <p>{pizza.name}</p>
+                <img src={pizza.image} className="img-fluid" style={{ height: "120px", width: "120px" }}></img>
             </div>
             <div className="flex-container">
                 <div className="w-100 m-1">
                     <p>Varients</p>
-                    <select className="form-control" value={varient} onChange={(e) => { setVarient(e.target.value) }}>
+                    <select style={{height:'30px',fontSize:'12px'}} className="form-control" value={varient} onChange={(e) => { setVarient(e.target.value) }}>
                         {pizza.varients.map(varient => {
                             return <option value={varient}>{varient}</option>
                         })}
@@ -38,7 +38,7 @@ export default function Pizza({ pizza }) {
                 </div>
                 <div className="w-100 m-1">
                     <p>Quantity</p>
-                    <select className="form-control" value={qty} onChange={(e) => { setQty(e.target.value) }}>
+                    <select style={{height:'30px',fontSize:'12px'}} className="form-control" value={qty} onChange={(e) => { setQty(e.target.value) }}>
                         {[...Array(10).keys()].map((x, i) => {
                             return <option value={i + 1}>{i + 1}</option>
                         })}
@@ -47,10 +47,10 @@ export default function Pizza({ pizza }) {
             </div>
             <div className="flex-container">
                 <div className="m-1 w-100">
-                    <h1 className="m-1">Prices: {pizza.prices[0][varient] * qty} RS</h1>
+                    <p className="m-1" style={{fontSize:'15px'}}>Price:{pizza.prices[0][varient] * qty}/-</p>
                 </div>
                 <div className="m-1 w-100">
-                    <button className="btn" onClick={addtocart}>ADD TO CART</button>
+                    <button className="btn btn-primary btn-sm" style={{fontSize:'12px'}} onClick={addtocart}>ADD TO CART</button>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@ export default function Pizza({ pizza }) {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <img src={pizza.image} className="img-fluid" style={{ height: "200px"}}></img>
+                    <img src={pizza.image} className="img-fluid" style={{ height: "100px"}}></img>
                    <p>{pizza.description}</p>
                 </Modal.Body>
 

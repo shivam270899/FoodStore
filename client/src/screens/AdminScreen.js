@@ -17,10 +17,9 @@ export default function AdminScreen() {
         }
     }, [])
     return (
-        <div>
-            <div className="row justify-content-center p-3">
+            <div className="row justify-content-center">
                 <div className="col-md-10">
-                <h2 style={{ fontSize: '35px' }}>Admin Screen</h2>
+                <p className="" style={{ fontSize: '25px' }}>Admin Screen</p>
                     <ul className="adminfunction">
                         <li><Link to="/admin/userlist">User List</Link></li>
                         <li><Link to="/admin/orderlist">Order List</Link></li>
@@ -37,6 +36,5 @@ export default function AdminScreen() {
                     </Switch>
                 </div>
             </div>
-        </div>
     )
 }

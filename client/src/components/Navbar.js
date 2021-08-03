@@ -10,7 +10,7 @@ export default function Navbar() {
     const dispatch = useDispatch();
     return (
         <div>
-            <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
+            <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded navbar-custom">
                 <a className="navbar-brand" href="/">FOOD STORE</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"><i style={{color:'black'}} className="fas fa-bars"></i></span>
@@ -22,7 +22,7 @@ export default function Navbar() {
                                 currentUser ?
                                 (
                                     <div className="dropdown mt-2">
-                                    <a style={{color:'black'}} className="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a style={{color:'black'}} className="dropdown-toggle text-decoration-none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       {currentUser.name}
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">

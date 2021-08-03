@@ -80,7 +80,7 @@ export default function EditpizzaScreen({match}) {
                     <input className="form-control" type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="category" />
                     <input className="form-control" type="text" value={image} onChange={(e) => setImage(e.target.value)} placeholder="image url" />
                     <input className="form-control" type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="description" />
-                    <button type="submit" className="btn mt-3">ADD pIZZA</button>
+                    <button type="submit" className="btn mt-3">Edit Pizza</button>
                 </form>
             </div>
         </div>

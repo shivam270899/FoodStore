@@ -39,12 +39,12 @@ export default function RegisterScreen() {
                     {error && (<Error error="Email Alreday exist"/>) }
                     {success && (<Success success=" User Registered Sucessfully"/>)}
 
-                    <h2 className="text-center mt-2" style={{ fontSize: "35px" }}>Register</h2>
+                    <h2 className="text-center mt-2" style={{ fontSize: "25px" }}>Register</h2>
                     <div>
-                        <input type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" className="form-control " />
-                        <input type="text" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="form-control " />
-                        <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="form-control" />
-                        <input type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" className="form-control" />
+                        <input style={{height:"30px",fontSize:'15px'}}  type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" className="form-control " />
+                        <input style={{height:"30px",fontSize:'15px'}}  type="text" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="form-control " />
+                        <input style={{height:"30px",fontSize:'15px'}}  type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="form-control" />
+                        <input style={{height:"30px",fontSize:'15px'}}  type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" className="form-control" />
                         <button className="btn mt-3 mb-3" onClick={register}>Register</button>
                         <br/>
                         <a style={{color:'black'}} className="mt-2" href='/login'>Click Here To Login</a>

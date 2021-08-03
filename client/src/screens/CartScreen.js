@@ -14,14 +14,14 @@ export default function CartScreen() {
     return (
         <div>
             <div className="row justify-content-center p-2" data-aos="fade-down">
-                <div className="col-md-6">
-                    <h2 style={{ fontSize: '40px' }}>My Cart</h2>
+                <div className="col-md-8">
+                    <h2 style={{ fontSize: '30px' }}>My Cart</h2>
                     {cartItems.map(item => {
                         return <div className="flex-container">
                             <div className="text-left m-1 w-100">
-                                <h1>{item.name} [{item.varient}]</h1>
-                                <h1>Price: {item.qty}*{item.prices[0][item.varient]} = {item.price}</h1>
-                                <h1 style={{display:'inline'}}>Quantity:</h1>
+                                <p>{item.name} [{item.varient}]</p>
+                                <p>Price: {item.qty}*{item.prices[0][item.varient]} = {item.price}</p>
+                                <p style={{display:'inline'}}>Quantity:</p>
                                 <i className="fa fa-plus" aria-hidden="true" onClick={()=>{dispatch(addToCart(item, item.qty+1, item.varient))}}></i>
                                 <b>{item.qty}</b>
                                 <i className="fa fa-minus" aria-hidden="true" onClick={()=>{dispatch(addToCart(item, item.qty-1, item.varient))}}></i>
@@ -36,8 +36,8 @@ export default function CartScreen() {
                         </div>
                     })}
                 </div>
-                <div className="col-md-4">
-                    <h2 style={{fontSize:"30px"}}>SubTotal: {subtotal} /-</h2>
+                <div className="col-md-3">
+                    <p style={{fontSize:"20px"}}>SubTotal: {subtotal}/-</p>
                     <Checkout subtotal={subtotal}></Checkout>
                 </div>
             </div>

@@ -28,11 +28,11 @@ export default function UserlistScreen(){
                 <table className="table table-striped table-bordered shadow-lg p-3 mb-5 bg-white rounded table-responsive-sm" data-aos="zoom-in">
                 <thead  className="thead-dark">
                     <tr>
-                        <td>User Id</td>
-                        <td>UserName</td>
-                        <td>Email</td>
-                        <td>IsAdmin</td>
-                        <td>Action</td>
+                        <td style={{fontSize:'15px'}}>User Id</td>
+                        <td style={{fontSize:'15px'}}>UserName</td>
+                        <td style={{fontSize:'15px'}}>Email</td>
+                        <td style={{fontSize:'15px'}}>IsAdmin</td>
+                        <td style={{fontSize:'15px'}}>Action</td>
                     </tr>
                 </thead>
                 <tbody>

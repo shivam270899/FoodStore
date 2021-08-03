@@ -29,12 +29,12 @@ export default function OrderlistScreen(){
                 <table className="table table-striped table-bordered shadow-lg p-3 mb-5 bg-white rounded table-responsive-sm" data-aos="zoom-in">
                 <thead  className="thead-dark">
                     <tr>
-                        <td>Order Id</td>
-                        <td>UserName</td>
-                        <td>Email</td>
-                        <td>Amount</td>
-                        <td>Date</td>
-                        <td>Status</td>
+                        <td style={{fontSize:'15px'}}>Order Id</td>
+                        <td style={{fontSize:'15px'}}>UserName</td>
+                        <td style={{fontSize:'15px'}}>Email</td>
+                        <td style={{fontSize:'15px'}}>Amount</td>
+                        <td style={{fontSize:'15px'}}>Date</td>
+                        <td style={{fontSize:'15px'}}>Status</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,7 +46,7 @@ export default function OrderlistScreen(){
                             <td>{order.orderAmount}</td>
                             <td>{order.createdAt.substring(0,10)}</td>
                             <td>
-                                {order.isDelivered ? (<h1 style={{fontSize:'25px'}}>Delivered</h1>) : <button className="btn" onClick={() => {dispatch(deliver(order._id))}}>Deliver</button>}
+                                {order.isDelivered ? (<p>Delivered</p>) : <button className="btn" onClick={() => {dispatch(deliver(order._id))}}>Deliver</button>}
                             </td>
                         </tr>
                     })}

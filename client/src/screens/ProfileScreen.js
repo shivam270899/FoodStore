@@ -45,16 +45,16 @@ export default function ProfileScreen() {
         <div className="register">
             <div className="row justify-content-center mt-5 ">
                 <div className="col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-white rounded">
-                    <h2 className="text-center mt-2" style={{ fontSize: "35px" }}>Profile</h2>
-                    <br />
+                    <h2 className="text-center mt-2" style={{ fontSize: "25px" }}>Profile</h2>
+                    
                     {updateloading && (<Loading />)}
                     {updateerror && (<Error error='Something Eent Wrong' />)}
                     {updatesuccess && (<Success success='Profile Updated Sucessfully' />)}
                     <div>
-                        <input type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" className="form-control " />
-                        <input type="text" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="form-control " />
-                        <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="form-control" />
-                        <input type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" className="form-control" />
+                        <input style={{height:"30px",fontSize:'15px'}}  type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" className="form-control " />
+                        <input style={{height:"30px",fontSize:'15px'}}  type="text" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="form-control " />
+                        <input style={{height:"30px",fontSize:'15px'}}  type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="form-control" />
+                        <input style={{height:"30px",fontSize:'15px'}} type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" className="form-control" />
                         <button className="btn mt-3 mb-3" onClick={profile}>Update</button>
                         <br />
                     </div>
